@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	logger := getLogger("lsp.log")
+	logger := getLogger("/home/shane/dev/go/educationalsp/log/lsp.log")
 	logger.Println("Hey, I started")
 
 	state := analysis.NewState()

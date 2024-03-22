@@ -1,15 +1,15 @@
 package lsp
 
-type DidChangeTextDocumentNotification struct {
+type DidChangeNotification struct {
 	Notification
-	Params DidChangeTextDocumentParams `json:"params"`
+	Params DidChangeParams `json:"params"`
 }
 
-type DidChangeTextDocumentParams struct {
-	TextDocument   VersionedTextDocumentIdentifier  `json:"textDocument"`
-	ContentChanges []TextDocumentContentChangeEvent `json:"contentChanges"`
+type DidChangeParams struct {
+	TextDocument   VersionedTextDocumentIdentifier `json:"textDocument"`
+	ContentChanges []ContentChangeEvent            `json:"contentChanges"`
 }
 
-type TextDocumentContentChangeEvent struct {
+type ContentChangeEvent struct {
 	Text string `json:"text"`
 }

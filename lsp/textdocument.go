@@ -42,3 +42,12 @@ type LocationLink struct {
 	TargetRange          Range  `json:"targetRange"`
 	TargetSelectionRange Range  `json:"targetSelectionRange"`
 }
+
+type WorkspaceEdit struct {
+	Changes map[string][]TextEdit `json:"changes"`
+}
+
+type TextEdit struct {
+	Range   Range  `json:"range"`
+	NewText string `json:"newText"`
+}
